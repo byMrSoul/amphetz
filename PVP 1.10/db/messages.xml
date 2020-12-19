@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<messages>
+	<message>
+        <deadline>150</deadline>
+        <shutdown>1</shutdown>
+        <text>AmphetZ #tmin minutes, don't log out inside custom buildings, they don't respawn instantly.</text>
+    </message>
+    <message>
+        <repeat>15</repeat>
+        <text>Restarts are 2.5hrs to reduce lag from bodies.</text>
+    </message>
+    <message>
+        <repeat>25</repeat>
+        <delay>2</delay>
+        <onconnect>1</onconnect>
+        <text>This server is being deleted on the 16th of January.</text>
+    </message>
+    <message>
+        <repeat>45</repeat>
+        <text>Server restarts every 2.5 hours, Nights are 30mins, Days are 3 hours</text>
+    </message>
+</messages>

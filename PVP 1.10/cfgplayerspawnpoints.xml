@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playerspawnpoints>
+    <!--
+        Spawn points settings for newly created player characters
+    -->
+    <fresh>
+        <!-- runtime parameters used when player is spawning -->
+        <spawn_params>
+            <!-- used to rate point against infected -->
+            <min_dist_infected>30.0</min_dist_infected>
+            <max_dist_infected>70.0</max_dist_infected>
+            <!-- used to rate point against other players -->
+            <min_dist_player>25.0</min_dist_player>
+            <max_dist_player>70.0</max_dist_player>
+            <!-- used to rate point against buildings -->
+            <min_dist_static>0.5</min_dist_static>
+            <max_dist_static>2.0</max_dist_static>
+        </spawn_params>
+
+        <!--
+            Generator parameters
+
+            Spawn points are generated around positions given inside <generator_posbubbles> element.
+            Around every position is created a rectangle with given dimensions.
+            This rectangle is then sampled for spawn point candidates in form of a grid.
+        -->
+        <generator_params>
+            <!--
+                Density is sample frequency of created rectangle.
+
+                example:                         example:
+                  density 4                        density 8
+
+                grid will look like this:        grid will look like this:
+
+                  +-----+-----+-----+-----+        +--+--+--+--+--+--+--+--+
+                  |     |     |     |     |        |  |  |  |  |  |  |  |  |
+                  |     |     |     |     |        +--+--+--+--+--+--+--+--+
+                  |     |     |     |     |        |  |  |  |  |  |  |  |  |
+                  +-----+-----+-----+-----+        +--+--+--+--+--+--+--+--+
+                  |     |     |     |     |        |  |  |  |  |  |  |  |  |
+                  |     |     |     |     |        +--+--+--+--+--+--+--+--+
+                  |     |     |     |     |        |  |  |  |  |  |  |  |  |
+                  +-----+-----+-----+-----+        +--+--+--+--+--+--+--+--+
+                  |     |     |     |     |        |  |  |  |  |  |  |  |  |
+                  |     |     |     |     |        +--+--+--+--+--+--+--+--+
+                  |     |     |     |     |        |  |  |  |  |  |  |  |  |
+                  +-----+-----+-----+-----+        +--+--+--+--+--+--+--+--+
+                  |     |     |     |     |        |  |  |  |  |  |  |  |  |
+                  |     |     |     |     |        +--+--+--+--+--+--+--+--+
+                  |     |     |     |     |        |  |  |  |  |  |  |  |  |
+                  +-----+-----+-----+-----+        +--+--+--+--+--+--+--+--+
+
+                Every '+' represents a spawn point candidate.
+                Blank areas are space between each spawn point.
+                Width of each area is exaclty width / density.
+                Height of each area is exaclty height / density.
+            -->
+            <grid_density>30.0</grid_density>
+            <!-- total width of grid in metres -->
+            <grid_width>30.0</grid_width>
+            <!-- total height of grid in metres -->
+            <grid_height>25.0</grid_height>
+            <!--  minimum distance from buildings for valid spawn point -->
+            <min_dist_static>0.5</min_dist_static>
+            <!--  maximum distance from buildings used to rate valid spawn point -->
+            <max_dist_static>2.0</max_dist_static>
+            <!-- terrain slope limits for valid spawn point -->
+            <min_steepness>-45</min_steepness>
+            <max_steepness>45</max_steepness>
+        </generator_params>
+
+        <!-- centers for grids of spawn points -->
+        <generator_posbubbles>
+				<pos x="4635.80" z="11007.92" /> <!--NWAFSmokeContainers-->
+                <pos x="4194.42" z="11127.50" /> <!--NWAFTents-->
+				<pos x="4460.80" z="10867.92" /> <!--NWAFfuel-->
+				<pos x="4843.85" z="10339.03" /> <!--NWAFmid-->
+				<pos x="5280.37" z="9797.51" /> <!--NWAFconstruction-->
+				<pos x="5365.92" z="9997.79" /> <!--NWAFconstruction2-->
+				<pos x="4605.66" z="9643.90" /> <!--NWAFbarracks-->
+				<pos x="4469.55" z="9577.79" /> <!--NWAFbarracks2-->
+				<pos x="4807.88" z="10351.67" /> <!--NWAFHangar-->
+				<pos x="4125.40" z="10557.78" /> <!--NWAFPrison-->
+				<pos x="4041.79" z="11616.53" /> <!--Bash-->
+				<pos x="3999.98" z="11788.61" /> <!--Bash-->
+				<pos x="2670.99" z="9910.29" /> <!--Lopatino-->
+				<pos x="2175.18" z="11191.67" /> <!--Valvatino-->
+				<pos x="1478.11" z="11910.14" /> <!--Sinistok-->
+				<pos x="3065.71" z="12586.80" /> <!--Topolinki-->
+				<pos x="3365.14" z="13130.27" /> <!-- Novaya1-->
+				<pos x="4342.20" z="13056.39" /> <!--Novaya2--> 
+				<pos x="6115.48" z="12674.30" /> <!-- Ratnoe-->
+				<pos x="6055.20" z="10456.67" /> <!-- Grishino-->
+				<pos x="6044.51" z="10316.67" /> <!-- Grishino2-->
+				<pos x="3918.32" z="8814.59" /> <!--Vybor-->
+				<pos x="3788.53" z="8775.71" /> <!--Vybor2-->
+				<pos x="5227.38" z="8618.69" /> <!--Kabanahoe-->
+				<pos x="8070.56" z="12597.50" /> <!--Servograd-->
+				<pos x="7512.52" z="12635.42" /> <!--Servograd2-->
+				<pos x="6321.59" z="7557.52" /> <!--StarySoba-->
+				<pos x="6025.07" z="7655.71" /> <!--StarySoba2-->
+				<pos x="7041.50" z="7678.07" /> <!--NovySoba-->
+				<pos x="7226.70" z="7668.35" /> <!--NovySoba2-->
+				<pos x="2461.00" z="5180.44" /> <!--Zeleno-->
+				<pos x="2519.82" z="5068.64" /> <!--Zeleno2-->
+				<pos x="2713.29" z="5374.88" /> <!--Zeleno3-->
+				<pos x="2101.29" z="3289.47" /> <!--PavlovoMB-->
+				<pos x="2077.96" z="3492.67" /> <!--PavlovoMB2-->
+        </generator_posbubbles>
+    </fresh>
+</playerspawnpoints>
